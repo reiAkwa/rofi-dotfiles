@@ -1,0 +1,127 @@
+/* Rofi theme matching ~/.config/waybar/style.css */
+
+* {
+    /* Palette (from waybar) */
+    bg:        #f0f8ff; /* window background */
+    fg:        #3b3b3b; /* window foreground */
+    accent:    #56a0d1; /* border / cpu */
+    surface:   #dae2e9; /* window / clock module */
+    surface2:  #a8b4c0; /* tray */
+    muted:     #5b7f92; /* network */
+    selected:  #56a0d1;
+
+    background-color: transparent;
+    text-color:       @fg;
+
+    font: "IosevkaTerm Nerd Font 12";
+    margin:  0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+window {
+    background-color: @bg;
+    /* match waybar's `border-bottom: 3px solid` look, all around */
+    border: 3px;
+    border-color: @accent;
+    border-radius: 12px;
+    padding: 10px;
+    width: 600px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    spacing: 8px;
+}
+
+inputbar {
+    background-color: @surface;
+    border-radius: 10px;
+    padding: 8px 12px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @muted;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search…";
+    placeholder-color: @muted;
+}
+
+listview {
+    background-color: transparent;
+    lines: 8;
+    columns: 1;
+    spacing: 4px;
+    scrollbar: false;
+    dynamic: true;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @bg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 1.2em;
+    padding: 0px 6px 0px 0px;
+}
+
+/* Sidebar / mode list */
+mode-switcher {
+    background-color: transparent;
+    spacing: 4px;
+}
+
+button {
+    background-color: @surface;
+    text-color: @fg;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @bg;
+}
+
+/* Scrollbar (when enabled) */
+scrollbar {
+    background-color: transparent;
+    handle-color: @accent;
+    handle-width: 6px;
+    border-radius: 3px;
+}
+
+/* Message / dialog boxes */
+message {
+    background-color: @surface;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg;
+}
